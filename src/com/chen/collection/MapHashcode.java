@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.sun.org.apache.xpath.internal.operations.Number;
+
 public class MapHashcode {
 	
 	Map<Integer, String> map =new HashMap<>();
@@ -29,7 +31,9 @@ public class MapHashcode {
     	System.out.println("3".hashCode());
     	System.out.println("8".hashCode());
     	System.out.println(mc.map.hashCode());
-    
+    	
+    	
+    	
 	}
     
 }
