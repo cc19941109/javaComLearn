@@ -2,6 +2,7 @@ package com.chen.thread;
 
 import java.util.concurrent.Callable;
 
+
 public class CreateThread implements Runnable,Callable<String>{
 
 	@Override
@@ -15,6 +16,7 @@ public class CreateThread implements Runnable,Callable<String>{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 	
 	
 }

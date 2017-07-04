@@ -13,7 +13,7 @@ class TestRunnable implements Runnable{
             }    
      }    
 }    
-public class ThreadDemo{    
+public class ThreadInterrupt{    
        public static void main(String[] args){    
              Runnable r=new TestRunnable();    
              Thread th1=new Thread(r);    
