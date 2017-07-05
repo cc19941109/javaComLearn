@@ -15,7 +15,7 @@ public class PerforAddMap {
 	private HashSet<Integer> hashSet = new HashSet<>();
 	private TreeSet<Integer> treeSet = new TreeSet<>();
 
-	private int _capicity = 2000000;
+	private int _capicity = 500000;
 	private int key;
 	private String value;
 
@@ -121,7 +121,7 @@ public class PerforAddMap {
 		System.out.println("createTreeSet    " + (end1110 - start1110));
 
 		System.out.println("------------------------------------------------------------");
-		
+
 		long start2 = System.currentTimeMillis();
 		pp.findHashMap(hashMap);
 		long end2 = System.currentTimeMillis();

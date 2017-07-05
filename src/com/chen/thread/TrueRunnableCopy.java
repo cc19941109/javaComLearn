@@ -5,28 +5,26 @@ package com.chen.thread;
  */
 class Threadd extends Thread {
 
-	private Integer ticket = 100;
+	private Integer ticket = 10;
 
 	@Override
 	public void run() {
 		while (ticket > 0) {
-			synchronized (ticket) {
+			synchronized (this) {
 				if (ticket > 0) {
-					System.out.print(currentThread().getName() + "  票数：" + --ticket);
-					System.out.println("   "+System.currentTimeMillis());
+					System.out.println(currentThread().getName() + "  票数：" + --ticket);
+					// System.out.println(" "+System.currentTimeMillis());
 				}
 				/*
 				 * notifyAll(); try { wait(100); } catch (InterruptedException
 				 * e) { e.printStackTrace(); }
 				 */
-
+				try {
+					yield();
+				} catch (Exception e) {
+					System.err.println("error");
+				}
 			}
-
-			// try {
-			// sleep(1000);
-			// } catch (Exception e) {
-			// System.err.println("error");
-			// }
 
 		}
 
@@ -40,12 +38,12 @@ public class TrueRunnableCopy {
 		new Thread(thread1).start();
 		new Thread(thread1).start();
 
-		// new Thread(new Threadd()).start();
+		//new Thread(new Threadd()).start();
 
-		// for (int i = 0; i < 3; i++) {
-		// Thread thread = new Threadd();
-		// thread.start();
-		// }
+//		 for (int i = 0; i < 3; i++) {
+//		 Thread thread = new Threadd();
+//		 thread.start();
+//		 }
 
 	}
 }
