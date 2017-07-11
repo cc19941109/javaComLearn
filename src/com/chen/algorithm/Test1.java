@@ -1,13 +1,12 @@
 package com.chen.algorithm;
 
+import java.math.BigDecimal;
+
 public class Test1 {
+	
 	public static void main(String[] args) {
-		Integer i = 1000;
-		Integer j = 1000;
-		Integer a = 100;
-		Integer b = 100;
-		System.out.println(i.equals(j));
-		System.out.println(a == b);
-		//String
+		BigDecimal sDecimal = new BigDecimal(Math.pow(2, 1000));
+		System.out.println(sDecimal);
+		System.out.println(0.06+0.01);
 	}
 }
