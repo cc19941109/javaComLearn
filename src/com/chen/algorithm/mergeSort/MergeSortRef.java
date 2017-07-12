@@ -18,16 +18,19 @@ public class MergeSortRef {
 			// 左边
 			System.out.println("pre  ----   left");
 			sort(nums, low, mid);
-			System.out.println("left------"+"low = " + low + "  mid=" + mid + " high=" + high + " " + Arrays.toString(nums));
+			System.out.println(
+					"left------" + "low = " + low + "  mid=" + mid + " high=" + high + " " + Arrays.toString(nums));
 			// 右边
-			
+
 			System.out.println("pre   ----   right");
 			sort(nums, mid + 1, high);
-			System.out.println("---right---low = " + low + "  mid=" + mid + " high=" + high + " " + Arrays.toString(nums));
+			System.out.println(
+					"---right---low = " + low + "  mid=" + mid + " high=" + high + " " + Arrays.toString(nums));
 
 			// 左右归并
 			merge(nums, low, mid, high);
-			System.out.println("   merge---low = " + low + "  mid=" + mid + " high=" + high + " " + Arrays.toString(nums));
+			System.out.println(
+					"   merge---low = " + low + "  mid=" + mid + " high=" + high + " " + Arrays.toString(nums));
 
 		}
 		return nums;
